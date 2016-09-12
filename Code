@@ -1,0 +1,13 @@
+int len=a.size();
+sort(a.begin(),a.end());
+int i=0,j=len-1;
+while(i<len){
+  while(abs(a[i]-a[j])>k&&j>0)
+    j--;
+  while(abs(a[i]-a[j])<k&&j<len-1)
+    j++;
+  if(abs(a[i]-a[j])==k){
+    writeAnswer(i,j);
+  }
+  i++;
+}
